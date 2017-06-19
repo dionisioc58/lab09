@@ -23,6 +23,15 @@ int main() {
     while(!piula.Vazio())
         cout << piula.Pop() << endl;
 
+    //Testa a classe fila
+    cout << "Teste de fila" << endl;
+    Fila<int> fila(3);
+    fila.Push(30);
+    fila.Push(40);
+    fila.Push(55);
+    while(!fila.Vazio())
+        cout << fila.Pop() << endl;
+
     //Testa as buscas
     cout << "Testes de buscas" << endl;
     int V[100];

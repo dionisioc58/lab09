@@ -1,15 +1,38 @@
+#ifndef LISTA_H
+#define LISTA_H
+
 #include <iostream>
 #include <string>
 using std::cout;
 using std::endl;
 using std::string;
-#include "dionisio.h"
 
 namespace edb1 {
-    template class Lista<int>;
-    template class Lista<float>;
-    template class Lista<double>;
-    template class Lista<string>;
+    
+    /**
+    * @class   Lista dionisio.h
+    * @brief   Classe que representa uma lista encadeada
+    * @details Os atributos de uma lista são: dado e prox
+    */  
+    template<typename T>
+    class Lista {
+    private:
+        T *dado;                                            /**< Dado */
+        Lista *prox;                                        /**< Próximo */
+    public:
+        Lista();                                            /**< Construtor padrão */
+        Lista(T valor);                                     /**< Construtor especifico */
+        ~Lista();                                           /**< Destrutor padrão */
+        T *getValor();                                      /**< Retorna o valor */
+        int getTamanho();                                   /**< Retorna a quantidade de itens na lista */
+        void Insere(T valor);                               /**< Insere um valor na lista */
+        void RemovePos(int pos);                            /**< Remove um valor na posição informada */
+        void RemoveVal(T *valor);                           /**< Remove um valor específico */
+        Lista *Busca(T *valor);                             /**< Procura um valor e retorna o nó */
+        T *Posiciona(int pos);                              /**< Retorna o elemento na posição dada */
+        Lista *getProximo();                                /**< Retorna o próximo nó */
+        void Exibe(bool comNumeros = false);                /**< Imprime a lista */
+    };
 
     /**
     * @details Os valores prox são inicializados com NULL
@@ -190,3 +213,5 @@ namespace edb1 {
         }
     }
 }
+
+#endif

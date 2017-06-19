@@ -1,15 +1,32 @@
+#ifndef PILHA_H
+#define PILHA_H
+
 #include <iostream>
 #include <string>
 using std::cout;
 using std::endl;
 using std::string;
-#include "dionisio.h"
 
 namespace edb1 {
-    template class Pilha<int>;
-    template class Pilha<float>;
-    template class Pilha<double>;
-    template class Pilha<string>;
+    /**
+    * @class   Pilha pilha.h
+    * @brief   Classe que representa uma pilha
+    * @details Os atributos de uma lista são: dados, qtde e max
+    */
+    template<typename T>
+    class Pilha {
+    private:
+        T *dados;                           /**< Dados */
+        int qtde;                           /**< Quantidade */
+        int max;                            /**< Máximo */
+    public:
+        Pilha(int tam);                     /**< Construtor padrão */
+        ~Pilha();                           /**< Destrutor padrão */
+        void Push(T val);                   /**< Inserir um dado na pilha */
+        T Pop();                            /**< Retirar um dado da pilha */
+        bool Vazio();                       /**< Testa se a pilha está vazia */
+        bool Cheio();                       /**< Testa se a pilha está cheia */
+    };
 
     /**
     * @details Os valores de dados e max são inicializados com o tamanho
@@ -66,3 +83,5 @@ namespace edb1 {
         return (qtde == max);
     }
 }
+
+#endif
