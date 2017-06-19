@@ -7,17 +7,28 @@ using namespace edb1;
 
 int main() {
     //Testa a classe lista
+    cout << "Teste de lista ligada" << endl;
     Lista<int> *nova = new Lista<int>();
     nova->Insere(12);
     nova->Insere(22);
     nova->Insere(32);
     nova->Exibe();
 
+    //Testa a classe pilha
+    cout << "Teste de pilha" << endl;
+    Pilha<int> piula(3);
+    piula.Push(30);
+    piula.Push(40);
+    piula.Push(55);
+    while(!piula.Vazio())
+        cout << piula.Pop() << endl;
+
     //Testa as buscas
+    cout << "Testes de buscas" << endl;
     int V[100];
     for(int i = 0; i < 100; i++)
         V[i] = i + 1;
-    cout << "Busca 2 " << linear_search_i(V, 0, 100, 30) << endl;
+    cout <<  linear_search_i(V, 0, 100, 30) << endl;
     cout <<  linear_search_r(V, 0, 100, 60) << endl;
     cout <<  binary_search_i(V, 0, 100, 30) << endl;
     cout <<  binary_search_r(V, 0, 100, 60) << endl;

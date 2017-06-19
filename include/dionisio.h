@@ -33,6 +33,26 @@ namespace edb1 {
         void Exibe(bool comNumeros = false);                /**< Imprime a lista */
     };
 
+    /**
+    * @class   Pilha pilha.h
+    * @brief   Classe que representa uma pilha
+    * @details Os atributos de uma lista são: dados, qtde e max
+    */
+    template<typename T>
+    class Pilha {
+    private:
+        T *dados;                           /**< Dados */
+        int qtde;                           /**< Quantidade */
+        int max;                            /**< Máximo */
+    public:
+        Pilha(int tam);                     /**< Construtor padrão */
+        ~Pilha();                           /**< Destrutor padrão */
+        void Push(T val);                   /**< Inserir um dado na pilha */
+        T Pop();                            /**< Retirar um dado da pilha */
+        bool Vazio();                       /**< Testa se a pilha está vazia */
+        bool Cheio();                       /**< Testa se a pilha está cheia */
+    };
+
     /*
     extern "C++" void imprime(std::string frase);
     extern "C++" template<typename T> T soma(T valorA, T valorB) {
