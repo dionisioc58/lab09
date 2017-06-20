@@ -1,5 +1,6 @@
 INC_DIR = ./include
 SRC_DIR = ./src
+DOC_DIR = ./doc
 OBJ_DIR = ./build
 LIB_DIR = ./lib
 
@@ -7,9 +8,9 @@ CC      = g++
 CFLAGS  = -Wall -pedantic -std=c++11 -ansi -I. -I$(INC_DIR) -g
 ARCHIVE = ar
 
-linux: dionisio.a dionisio.so prog_estatico prog_dinamico
+linux: clean dionisio.a dionisio.so prog_estatico prog_dinamico doxy
 
-windows: dionisio.lib dionisio.dll prog_estatico.exe prog_dinamico.exe
+windows: clean dionisio.lib dionisio.dll prog_estatico.exe prog_dinamico.exe doxy
 
 #LINUX
 dionisio.a: $(SRC_DIR)/dionisio.cpp $(INC_DIR)/pilha.h $(INC_DIR)/fila.h $(INC_DIR)/lista.h $(INC_DIR)/buscas.h $(INC_DIR)/ordenacoes.h $(INC_DIR)/dionisio.h
@@ -44,6 +45,11 @@ prog_estatico.exe:
 prog_dinamico.exe:
 	$(CC) $(CFLAGS) $(SRC_DIR)/main.cpp $(LIB_DIR)/dionisio.dll -o $(OBJ_DIR)/$@
 
+doxy:
+	$(RM) $(DOC_DIR)/*
+	doxygen Doxyfile
+
 clean:
 	@echo "Removendo arquivos objeto e executaveis/binarios..."
 	@rm -rf $(OBJ_DIR)/*
+	@rm -rf $(DOC_DIR)/*

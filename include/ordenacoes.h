@@ -4,6 +4,11 @@
     using namespace std;
 
     namespace edb1 {
+        /**
+        * @details      Função de ordenação por inserção
+        * @param[inout] *V Vetor com os dados
+        * @param[in]    N Número de elementos no vetor
+        */
         extern "C++" template<typename T>
         void insertionSort(T *V, int N) {
             for (int ii = 0; ii < N; ii++){
@@ -17,6 +22,11 @@
             }            
         }
 
+        /**
+        * @details      Função de ordenação por seleção
+        * @param[inout] *V Vetor com os dados
+        * @param[in]    N Número de elementos no vetor
+        */
         extern "C++" template<typename T>
         void selectionSort(T *V, int N) {
             int menor, troca;
@@ -34,6 +44,11 @@
             }
         }
 
+        /**
+        * @details      Função de ordenação por bubble
+        * @param[inout] *v Vetor com os dados
+        * @param[in]    n Número de elementos no vetor
+        */
         extern "C++" template<typename T>
         void bubbleSort(T v[], int n) {      
             int i, aux;
@@ -51,6 +66,13 @@
             } while (f);
         }
 
+        /**
+        * @details      Função auxiliar de ordenação por merge
+        * @param[inout] arr Vetor com os dados
+        * @param[in]    l Posição mais à esquerda no vetor para ordenação
+        * @param[in]    m Posição média no vetor
+        * @param[in]    r Posição mais à direita para ordenação
+        */
         template<typename T>
         void merge(T arr[], int l, int m, int r){
             int i, j, k;
@@ -94,6 +116,12 @@
             delete[] R;
         }
 
+        /**
+        * @details      Função de ordenação por merge
+        * @param[inout] arr Vetor com os dados
+        * @param[in]    l Posição mais à esquerda no vetor para ordenação
+        * @param[in]    r Posição mais à direita para ordenação
+        */
         extern "C++" template<typename T>
         void mergeSort(T arr[], int l, int r) {
             if (l < r) {
@@ -104,6 +132,12 @@
             }
         }
 
+        /**
+        * @details      Função de ordenação por quick
+        * @param[inout] arr Vetor com os dados
+        * @param[in]    left Posição mais à esquerda no vetor para ordenação
+        * @param[in]    right Posição mais à direita para ordenação
+        */
         extern "C++" template<typename T>
         void quickSort(T arr[], int left, int right) {
             int i = left, j = right;

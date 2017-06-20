@@ -133,24 +133,5 @@ int main() {
         cout << X[i] << "  ";
     cout << endl;
 
-
-
-
-    /*string frase = "Olá mundo!";
-    Teste<int> t(10);
-    cout << t.a << endl;
-    
-    Teste<int> t2;
-    cout << t2.a << endl;
-    t2.Imprimir();
-
-    Teste<float> t3;
-    cout << t3.a << endl;
-    t3.Imprimir();
-
-    imprime(frase);
-    cout << "Resultado da soma 5.3 + 6.2: " << soma(5.3, 6.2) << endl;
-    cout << "O maior valor entre 5 e 6: " << edb1::max(5, 6) << endl;*/
-
     return 0;
 }

@@ -2,6 +2,13 @@
 #define BUSCAS_H
 
 namespace edb1 {
+    /**
+    * @details      Função de busca linear iterativa
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int linear_search_i(T A[], int first, int end, T k) {
         int i, size = end - first;
@@ -11,6 +18,13 @@ namespace edb1 {
         return -1;
     }
 
+    /**
+    * @details      Função de busca linear recursiva
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int linear_search_r(T A[], int first, int end, T k) {
         int n = (end - first);
@@ -22,6 +36,13 @@ namespace edb1 {
             return linear_search_r(A, 0, (n - 1), k);
     }
 
+    /**
+    * @details      Função de busca binária iterativa
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int binary_search_i(T A[], int first, int end, T k) {
         int middle;
@@ -37,6 +58,13 @@ namespace edb1 {
         return -1;
     }
 
+    /**
+    * @details      Função de busca binária recursiva
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int binary_search_r(T A[], int first, int end, T k) {
         int middle = (first + end)/2;
@@ -51,6 +79,13 @@ namespace edb1 {
         return -1;
     }
 
+    /**
+    * @details      Função de busca ternária iterativa
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int ternary_search_i(T A[], int first, int end, T k) {
         int middle1, middle2;
@@ -76,6 +111,13 @@ namespace edb1 {
         return -1;
     }
 
+    /**
+    * @details      Função de busca ternária recursiva
+    * @param[inout] A Vetor com os dados
+    * @param[in]    first Posição mais à esquerda no vetor para a busca
+    * @param[in]    end Posição mais à direita para busca
+    * @param[in]    k Elemento a ser buscado
+    */
     extern "C++" template<typename T>
     int ternary_search_r(T A[], int first, int end, T k) {
         if((first < 0) || (end < (end-first)-1) || (first > end))
