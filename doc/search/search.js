@@ -7,16 +7,18 @@
 
 var indexSectionsWithContent =
 {
-  0: "bcefgilprv~",
+  0: "bcefgilmprv~",
   1: "flp",
-  2: "bcefgilprv~"
+  2: "m",
+  3: "bcefgilmprv~"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "files",
+  3: "functions"
 };
 
 function convertToId(search)

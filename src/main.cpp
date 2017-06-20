@@ -1,11 +1,26 @@
+/**
+* @file     main.cpp
+* @brief 	Arquivo fonte para execução do projeto
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
+
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 #include "dionisio.h"
 
 using namespace std;
 using namespace edb1;
 
-int main() {
+/**
+* @brief        Função principal do programa
+* @param[in]	argc	Quantidade de argumentos
+* @param[in]    *argv[]	Lista de argumentos
+* @return		Retorno
+*/
+int main(int argc, char* argv[]) {
     //Testa a classe lista
     cout << "Teste de lista ligada" << endl;
     Lista<int> *nova = new Lista<int>();
