@@ -29,7 +29,8 @@
         */
         extern "C++" template<typename T>
         void selectionSort(T *V, int N) {
-            int menor, troca;
+            int menor;
+            T troca;
             for(int i = 0; i < (N - 1); i++) {
                 menor = i;
                 for(int j = (i + 1); j < N; j++)
@@ -51,7 +52,8 @@
         */
         extern "C++" template<typename T>
         void bubbleSort(T v[], int n) {      
-            int i, aux;
+            int i;
+            T aux;
             bool f;
             do {
                 f = false;
@@ -141,8 +143,8 @@
         extern "C++" template<typename T>
         void quickSort(T arr[], int left, int right) {
             int i = left, j = right;
-            int tmp;
-            int pivot = arr[(left + right) / 2];
+            T tmp;
+            T pivot = arr[(left + right) / 2];
             while (i <= j) {
                 while (arr[i] < pivot)
                     i++;
