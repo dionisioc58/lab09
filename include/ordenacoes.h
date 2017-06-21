@@ -1,3 +1,10 @@
+/**
+* @file     ordenacoes.h
+* @brief 	Arquivo com definições de funções de ordenação
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
 #ifndef ORDENACOES_H
 #define ORDENACOES_H
 
@@ -5,7 +12,7 @@
 
     namespace edb1 {
         /**
-        * @details      Função de ordenação por inserção
+        * @brief      Função de ordenação por inserção
         * @param[inout] *V Vetor com os dados
         * @param[in]    N Número de elementos no vetor
         */
@@ -23,7 +30,7 @@
         }
 
         /**
-        * @details      Função de ordenação por seleção
+        * @brief      Função de ordenação por seleção
         * @param[inout] *V Vetor com os dados
         * @param[in]    N Número de elementos no vetor
         */
@@ -46,7 +53,7 @@
         }
 
         /**
-        * @details      Função de ordenação por bubble
+        * @brief      Função de ordenação por bubble
         * @param[inout] *v Vetor com os dados
         * @param[in]    n Número de elementos no vetor
         */
@@ -69,7 +76,7 @@
         }
 
         /**
-        * @details      Função auxiliar de ordenação por merge
+        * @brief      Função auxiliar de ordenação por merge
         * @param[inout] arr Vetor com os dados
         * @param[in]    l Posição mais à esquerda no vetor para ordenação
         * @param[in]    m Posição média no vetor
@@ -119,7 +126,7 @@
         }
 
         /**
-        * @details      Função de ordenação por merge
+        * @brief      Função de ordenação por merge
         * @param[inout] arr Vetor com os dados
         * @param[in]    l Posição mais à esquerda no vetor para ordenação
         * @param[in]    r Posição mais à direita para ordenação
@@ -135,7 +142,7 @@
         }
 
         /**
-        * @details      Função de ordenação por quick
+        * @brief      Função de ordenação por quick
         * @param[inout] arr Vetor com os dados
         * @param[in]    left Posição mais à esquerda no vetor para ordenação
         * @param[in]    right Posição mais à direita para ordenação

@@ -1,13 +1,21 @@
+/**
+* @file     buscas.h
+* @brief 	Arquivo com definições de funções de busca
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
+
 #ifndef BUSCAS_H
 #define BUSCAS_H
 
 namespace edb1 {
     /**
-    * @details      Função de busca linear iterativa
-    * @param[inout] A Vetor com os dados
-    * @param[in]    first Posição mais à esquerda no vetor para a busca
-    * @param[in]    end Posição mais à direita para busca
-    * @param[in]    k Elemento a ser buscado
+    * @brief    Função de busca linear iterativa
+    * @param    A Vetor com os dados
+    * @param    first Posição mais à esquerda no vetor para a busca
+    * @param    end Posição mais à direita para busca
+    * @param    k: Elemento a ser buscado
     */
     extern "C++" template<typename T>
     int linear_search_i(T A[], int first, int end, T k) {
@@ -19,7 +27,7 @@ namespace edb1 {
     }
 
     /**
-    * @details      Função de busca linear recursiva
+    * @brief      Função de busca linear recursiva
     * @param[inout] A Vetor com os dados
     * @param[in]    first Posição mais à esquerda no vetor para a busca
     * @param[in]    end Posição mais à direita para busca
@@ -37,7 +45,7 @@ namespace edb1 {
     }
 
     /**
-    * @details      Função de busca binária iterativa
+    * @brief      Função de busca binária iterativa
     * @param[inout] A Vetor com os dados
     * @param[in]    first Posição mais à esquerda no vetor para a busca
     * @param[in]    end Posição mais à direita para busca
@@ -59,7 +67,7 @@ namespace edb1 {
     }
 
     /**
-    * @details      Função de busca binária recursiva
+    * @brief      Função de busca binária recursiva
     * @param[inout] A Vetor com os dados
     * @param[in]    first Posição mais à esquerda no vetor para a busca
     * @param[in]    end Posição mais à direita para busca
@@ -80,7 +88,7 @@ namespace edb1 {
     }
 
     /**
-    * @details      Função de busca ternária iterativa
+    * @brief      Função de busca ternária iterativa
     * @param[inout] A Vetor com os dados
     * @param[in]    first Posição mais à esquerda no vetor para a busca
     * @param[in]    end Posição mais à direita para busca
@@ -112,7 +120,7 @@ namespace edb1 {
     }
 
     /**
-    * @details      Função de busca ternária recursiva
+    * @brief      Função de busca ternária recursiva
     * @param[inout] A Vetor com os dados
     * @param[in]    first Posição mais à esquerda no vetor para a busca
     * @param[in]    end Posição mais à direita para busca

@@ -1,3 +1,10 @@
+/**
+* @file     fila.h
+* @brief 	Definição da classe Fila
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
 #ifndef FILA_H
 #define FILA_H
 

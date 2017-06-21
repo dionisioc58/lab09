@@ -8,6 +8,8 @@ PROJECT_NAME		= "Laboratorio 9"
 # Descricao do projeto
 PROJECT_BRIEF		= "Laboratório 9 de Linguagem de Programação I"
 
+USE_MDFILE_AS_MAINPAGE = README.md
+
 # Endereco do diretorio no qual sera armazenada a documentacao gerada
 OUTPUT_DIRECTORY 	=
 

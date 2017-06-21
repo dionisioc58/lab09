@@ -1,3 +1,11 @@
+/**
+* @file     lista.h
+* @brief 	Definição da classe Lista
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
+
 #ifndef LISTA_H
 #define LISTA_H
 

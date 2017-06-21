@@ -1,3 +1,11 @@
+/**
+* @file     pilha.h
+* @brief 	Definição da classe Pilha
+* @author   Dionísio Carvalho (dionisio@naracosta.com.br)
+* @since    20/06/2017
+* @date     20/06/2017
+*/
+
 #ifndef PILHA_H
 #define PILHA_H
 
